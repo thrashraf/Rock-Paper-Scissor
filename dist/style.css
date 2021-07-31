@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1.3;
+  margin: auto;
+  padding: 0;
+  background-image: linear-gradient(to bottom, #1f3756, #141539);
+  background-repeat: no-repeat;
+  height: 896px;
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+}
+.container header {
+  border: 3px solid #606e85;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px 25px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+.container header img {
+  width: 83px;
+  padding-top: 10px;
+}
+.container header .score {
+  background-color: #ffffff;
+  height: 72px;
+  padding: 25px;
+  width: 80px;
+  margin-left: 50px;
+  border-radius: 10px;
+}
+.container header .score p {
+  font-family: "Barlow Semi Condensed";
+  font-size: 12px;
+  margin-top: 0px;
+  position: relative;
+  bottom: 18px;
+  color: #2a46c0;
+}
+.container header .score h2 {
+  font-family: "Barlow Semi Condensed";
+  position: relative;
+  bottom: 40px;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 1px;
+  color: #3b4363;
+}
+.container .rules-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.container .rules-container .rules-picture {
+  background-color: #ffffff;
+  padding: 50px 10px 10px 10px;
+  border-radius: 10px;
+  text-align: center;
+  display: block;
+  position: absolute;
+}
+.container .rules-container .rules-picture .fa-times {
+  display: block;
+  font-size: 50px;
+  margin-top: 50px;
+  color: #ccc;
+}
+.container main {
+  background-image: url("/images/bg-triangle.svg");
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-bottom: 250px;
+}
+.container main .paper-container {
+  position: relative;
+  bottom: 75px;
+  left: 20px;
+  background-color: #ffffff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, #4865f4, #5671f5);
+}
+.container main .paper-container .paper {
+  background-color: #ffffff;
+  height: 90px;
+  padding: 20px;
+  border-radius: 50%;
+}
+.container main .scissor-container {
+  position: relative;
+  bottom: 80px;
+  left: 105px;
+  background-color: #ffffff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, #ec9e0e, #eca922);
+}
+.container main .scissor-container .scissor {
+  background-color: #ffffff;
+  height: 90px;
+  padding: 20px;
+  border-radius: 50%;
+}
+.container main .rock-container {
+  position: relative;
+  top: 70px;
+  right: 130px;
+  background-color: #ffffff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, #dc2e4e, #dd405d);
+}
+.container main .rock-container .rock {
+  background-color: #ffffff;
+  height: 90px;
+  padding: 20px;
+  border-radius: 50%;
+}
+.container footer {
+  margin: auto;
+  position: relative;
+}
+.container footer .rules {
+  width: 150px;
+  text-align: center;
+  border: 3px solid #606e85;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.container footer .rules h4 {
+  margin: 0;
+  padding: 10px;
+  font-family: "Barlow Semi Condensed";
+  color: #ffffff;
+  font-size: 20px;
+}
+.container .game-start {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  grid-column-gap: 80px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+.container .game-start .paper-container {
+  position: relative;
+  bottom: 75px;
+  left: 20px;
+  background-color: #ffffff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, #4865f4, #5671f5);
+}
+.container .game-start .paper-container .paper {
+  background-color: #ffffff;
+  height: 90px;
+  padding: 20px;
+  border-radius: 50%;
+}
+.container .game-start .scissor-container {
+  background-color: #ffffff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, #ec9e0e, #eca922);
+}
+.container .game-start .scissor-container .scissor {
+  background-color: #ffffff;
+  height: 90px;
+  padding: 20px;
+  border-radius: 50%;
+}
+.container .game-start .rock-container {
+  margin: 0;
+  background-color: #ffffff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, #dc2e4e, #dd405d);
+}
+.container .game-start .rock-container .rock {
+  background-color: #ffffff;
+  height: 90px;
+  padding: 20px;
+  border-radius: 50%;
+}
+.container .result {
+  margin: auto;
+  text-align: center;
+  display: none;
+}
+.container .result h1 {
+  font-family: "Barlow Semi Condensed";
+  color: #ffffff;
+  font-size: 50px;
+  margin: 0;
+}
+.container .result .play-again {
+  background-color: #ffffff;
+  font-family: "Barlow Semi Condensed";
+  color: #3b4363;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 30px 0px 60px 0px;
+  width: 160px;
+}
+.container .result .play-again h4 {
+  margin: 0px;
+}
+
+@media all and (min-width: 700px) {
+  .container header {
+    min-width: 600px;
+  }
+  .container header img {
+    width: 150px;
+  }
+  .container header .score {
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    margin-left: 140px;
+  }
+  .container header .score p {
+    font-size: 20px;
+  }
+  .container header .score h2 {
+    font-size: 50px;
+  }
+  .container main {
+    background-size: 410px;
+    height: 100%;
+  }
+  .container main .paper-container {
+    bottom: 150px;
+    width: 220px;
+    height: 220px;
+    padding: 25px;
+  }
+  .container main .paper-container .paper {
+    height: 170px;
+    width: 170px;
+    text-align: center;
+  }
+  .container main .paper-container .paper img {
+    padding-top: 20px;
+    width: 80px;
+  }
+  .container main .scissor-container {
+    bottom: 150px;
+    left: 200px;
+    height: 220px;
+    width: 220px;
+    padding: 25px;
+  }
+  .container main .scissor-container .scissor {
+    height: 170px;
+    width: 170px;
+    text-align: center;
+  }
+  .container main .scissor-container .scissor img {
+    padding-top: 20px;
+    width: 80px;
+  }
+  .container main .rock-container {
+    right: 220px;
+    top: 100px;
+    height: 220px;
+    width: 220px;
+    padding: 25px;
+  }
+  .container main .rock-container .rock {
+    height: 170px;
+    width: 170px;
+    text-align: center;
+  }
+  .container main .rock-container .rock img {
+    padding-top: 20px;
+    width: 80px;
+  }
+  .container footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    position: relative;
+    bottom: 80px;
+  }
+}

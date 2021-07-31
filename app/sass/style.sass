@@ -1,0 +1,375 @@
+@import '_variable'
+@import '_global'
+
+
+.container
+
+    display: grid
+    grid-template-columns: 1fr
+    position: relative
+    
+    
+    
+    
+
+    header
+        border: 3px solid $Header-Outline
+        display: grid
+        grid-template-columns: 1fr 1fr
+        padding: 10px 25px
+        border-radius: 10px
+        margin: auto
+        margin-top: 30px
+        margin-bottom: 70px
+       
+        
+        
+          
+        img
+            width: 83px
+            padding-top: 10px
+
+        .score
+            background-color: #ffffff
+            height: 72px
+            padding: 25px
+            width: 80px
+            margin-left: 50px
+            border-radius: 10px
+
+            p
+                font-family: $font
+                font-size: 12px
+                margin-top: 0px
+                position: relative
+                bottom: 18px
+                color: $Score-Text
+            
+            h2
+                font-family: $font
+                position: relative
+                bottom: 40px
+                text-align: center
+                font-size: 40px
+                margin-top: 1px
+                color: $Dark-Text
+    
+    .rules-container
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 30px
+
+        .rules-picture
+            background-color: #ffffff
+            padding: 50px 10px 10px 10px
+            border-radius: 10px
+            text-align: center
+            display: block
+            position: absolute 
+           
+           
+            
+
+            .fa-times
+                display: block
+                font-size: 50px
+                margin-top: 50px
+                color: #ccc
+    
+
+    main
+        
+        background-image: url('/images/bg-triangle.svg')
+        background-size: 200px
+        background-repeat: no-repeat 
+        background-position: center
+        display: none
+        justify-content: center
+        align-items: center
+        height: 200px
+       
+        margin-bottom: 250px
+
+        
+        
+
+
+        .paper-container
+            position: relative
+            bottom: 75px
+            left: 20px
+            background-color: #ffffff
+            width: 120px
+            height: 120px
+            border-radius: 50%
+            padding: 15px
+            text-align: center
+            cursor: pointer
+            background-image: linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%))
+
+        
+            .paper
+                background-color: #ffffff
+                height: 90px
+                padding: 20px
+                border-radius: 50%
+        
+
+        .scissor-container
+            position: relative
+            bottom: 80px
+            left: 105px
+            background-color: #ffffff
+            width: 120px
+            height: 120px
+            border-radius: 50%
+            padding: 15px
+            text-align: center
+            cursor: pointer
+            background-image: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%))
+
+            .scissor
+                background-color: #ffffff
+                height: 90px
+                padding: 20px
+                border-radius: 50%
+            
+        
+        .rock-container
+            position: relative
+            top: 70px
+            right: 130px
+            background-color: #ffffff
+            width: 120px
+            height: 120px
+            border-radius: 50%
+            padding: 15px
+            text-align: center
+            cursor: pointer
+            background-image: linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%))
+
+            .rock
+                background-color: #ffffff
+                height: 90px
+                padding: 20px
+                border-radius: 50%
+    
+
+    footer
+        
+        margin: auto
+        position: relative
+
+
+               
+           
+        .rules
+            width: 150px
+            text-align: center
+            border: 3px solid $Header-Outline
+            cursor: pointer
+            border-radius: 10px
+            
+            
+
+            h4
+                margin: 0
+                padding: 10px
+                font-family: $font
+                color: #ffffff
+                font-size: 20px
+    
+    
+    
+    .game-start
+
+        display: grid
+        grid-template-columns: 1fr 1fr
+        margin: auto
+        grid-column-gap: 80px
+        margin-bottom: 100px
+        margin-top: 50px
+
+        .paper-container
+            position: relative
+            bottom: 75px
+            left: 20px
+            background-color: #ffffff
+            width: 120px
+            height: 120px
+            border-radius: 50%
+            padding: 15px
+            text-align: center
+            cursor: pointer
+            background-image: linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%))
+
+        
+            .paper
+                background-color: #ffffff
+                height: 90px
+                padding: 20px
+                border-radius: 50%
+
+        
+        .scissor-container
+            
+            background-color: #ffffff
+            width: 120px
+            height: 120px
+            border-radius: 50%
+            padding: 15px
+            text-align: center
+            cursor: pointer
+            background-image: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%))
+
+            .scissor
+                background-color: #ffffff
+                height: 90px
+                padding: 20px
+                border-radius: 50%
+        
+        .rock-container
+            
+            margin: 0
+            background-color: #ffffff
+            width: 120px
+            height: 120px
+            border-radius: 50%
+            padding: 15px
+            text-align: center
+            cursor: pointer
+            background-image: linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%))
+
+            .rock
+                background-color: #ffffff
+                height: 90px
+                padding: 20px
+                border-radius: 50%
+
+    .result
+        margin: auto
+        text-align: center
+        display: none
+
+        h1
+            font-family: $font
+            color: #ffffff
+            font-size: 50px
+            margin: 0
+        
+        .play-again
+            background-color: #ffffff
+            font-family: $font
+            color: $Dark-Text
+            padding: 10px
+            border-radius: 10px
+            margin: 30px 0px 60px 0px
+            width: 160px
+            
+
+            h4
+                margin: 0px
+        
+
+        
+
+
+@media all and ( min-width:700px)
+
+    .container
+
+        header
+            min-width: 600px
+
+            img
+                width: 150px
+                
+
+            .score
+                width: 150px
+                height: 100px
+                text-align: center
+                margin-left: 140px
+                p
+                    font-size: 20px
+                
+                h2
+                    font-size: 50px
+
+        
+
+        main
+            background-size: 410px
+            height: 100%
+            
+
+            .paper-container
+                bottom: 150px
+                width: 220px
+                height: 220px
+                padding: 25px
+
+                .paper
+                    height: 170px
+                    width: 170px
+                    text-align: center
+
+                    img
+                        padding-top: 20px
+                        width: 80px
+            
+            .scissor-container
+                bottom: 150px
+                left: 200px
+                height: 220px
+                width: 220px
+                padding: 25px
+
+                .scissor
+                    height: 170px
+                    width: 170px
+                    text-align: center
+
+                    img
+                        padding-top: 20px 
+                        width: 80px
+            
+            .rock-container
+                right: 220px
+                top: 100px
+                height: 220px
+                width: 220px
+                padding: 25px
+
+
+                .rock
+                    height: 170px
+                    width: 170px
+                    text-align: center
+
+                    img
+                        padding-top: 20px 
+                        width: 80px
+            
+        
+        footer
+            display: flex
+            justify-content: flex-end
+            margin-right: 50px
+            position: relative
+            bottom: 80px            
+
+                    
+
+
+
+                
+                
+    
+                
+                
+
+            
+                
+            
