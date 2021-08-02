@@ -1,95 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="/dist/style.css">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/dist/style.css">
 </head>
 <body>
-  <div class="backdrop"></div>
-  <div class="container">
-    <header>
-      <img src="/images/logo.svg" alt="">
-      <div class="score">
-        <p>SCORE</p>
-        <h2>12</h2>
-      </div>
-    </header>
-    <div class="rules-container">
-      <div class="rules-picture">
-        <img src="/images/image-rules.svg" alt="">
-        <i class="fa fa-times" aria-hidden="true"></i>
-      </div>
+    <div class="container">
+       <div class="score-container">
+           <img src="/images/logo.svg" alt="">
+           <div class="container">
+               <h4>SCORE</h4>
+               <h1>12</h1>
+           </div>
+       </div>
+
+       <div class="rules">
+        <div class="show-rules">
+            <img src="/images/image-rules.svg" alt="">
+            <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+       </div>
+       
+       <div class="versus-container">
+           <div class="game-start">
+               <div class="player"></div>
+
+               <div class="computer"></div>
+            </div>
+            
+           <div class="weapon">
+               <div class="paper" id="button">
+                   <span>
+                        <img src="/images/icon-paper.svg" alt="">
+                   </span>
+                    
+               </div>
+
+               <div class="scissors" id="button">
+                <span>
+                        <img src="/images/icon-scissors.svg" alt="">
+                   </span>
+               </div>
+
+               <div class="rock" id="button">
+                <span>
+                        <img src="/images/icon-rock.svg" alt="">
+                   </span>
+
+               </div>
+           </div>
+       </div>
+
+       <div class="result-container">
+
+        <h1 id="result">Player WIN</h1>
+        <div class="play-again">
+            <h6>PLAY AGAIN</h6>
+        </div>
+       </div>
+       
+
+       <div class="rules-container">
+            <div class="h1">RULES</div>
+
+       </div>
     </div>
-    
-    <main>
-      
-      <div class="paper-container">
-        <div class="paper">
-          <img src="/images/icon-paper.svg" alt="">
-        </div>
-      </div>
-      
-      <div class="scissor-container">
-        <div class="scissor">
-          <img src="/images/icon-scissors.svg" alt="">
-        </div>
-      </div>
-      
-      <div class="rock-container">
-        <div class="rock">
-          <img src="/images/icon-rock.svg" alt="">
-        </div>
-      </div>
-    </main>
-
-    <div class="game-start">
-      <div class="rock-container">
-        <div class="rock">
-          <img src="/images/icon-rock.svg" alt="">
-        </div>
-      </div>
-
-      <div class="scissor-container">
-        <div class="scissor">
-          <img src="/images/icon-scissors.svg" alt="">
-        </div>
-
-        
-      </div>
-    </div>
-
-    <div class="result">
-      <h1>YOU WIN</h1>
-      <div class="play-again">
-        <h4>PLAY AGAIN</h4>
-      </div>
-    </div>
-
-
-    <footer>
-
-      
-      <div class="rules">
-        <h4>RULES</h4>
-      </div>
-      
-
-    </footer>
-  
-  </div>
-  
-
-
-
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>. -->
-  </div>
+    <script src="/app/js/app.js"></script>
 </body>
 </html>

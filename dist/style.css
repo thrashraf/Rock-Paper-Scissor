@@ -20,314 +20,517 @@ body {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr;
-  position: relative;
-}
-.container header {
-  border: 3px solid #606e85;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 10px 25px;
-  border-radius: 10px;
   margin: auto;
-  margin-top: 30px;
-  margin-bottom: 70px;
 }
-.container header img {
-  width: 83px;
-  padding-top: 10px;
-}
-.container header .score {
-  background-color: #ffffff;
-  height: 72px;
-  padding: 25px;
-  width: 80px;
-  margin-left: 50px;
+.container .score-container {
+  margin: 50px 30px;
+  display: flex;
+  border: 3px solid #606e85;
+  padding: 10px 20px;
   border-radius: 10px;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-.container header .score p {
+.container .score-container .container {
+  margin: 0px;
+  text-align: center;
+  align-self: flex-end;
   font-family: "Barlow Semi Condensed";
-  font-size: 12px;
-  margin-top: 0px;
-  position: relative;
-  bottom: 18px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+.container .score-container .container h4 {
+  margin: 0;
   color: #2a46c0;
 }
-.container header .score h2 {
-  font-family: "Barlow Semi Condensed";
-  position: relative;
-  bottom: 40px;
+.container .score-container .container h1 {
+  margin: 0;
+}
+.container .score-container img {
+  width: 100px;
+}
+.container .versus-container {
+  height: 300px;
+}
+.container .versus-container .game-start {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 80px;
+  margin: 0px 30px;
+}
+.container .versus-container .game-start .player {
+  margin: auto;
+  width: 110px;
+  height: 110px;
+  background-color: #141539;
+  border-radius: 50%;
+}
+.container .versus-container .game-start .player .paper {
+  width: 110px;
+  height: 110px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: inset -2px -10px 2px 2px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(to bottom, #4865f4, #5671f5);
+}
+.container .versus-container .game-start .player .paper span {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 20px;
   text-align: center;
-  font-size: 40px;
-  margin-top: 1px;
-  color: #3b4363;
+  box-shadow: inset 0 5px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.container .versus-container .game-start .player .paper span img {
+  width: 35px;
+}
+.container .versus-container .game-start .player .scissors {
+  box-shadow: inset -2px -10px 2px 2px rgba(0, 0, 0, 0.25);
+  width: 110px;
+  height: 110px;
+  padding: 15px;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, #ec9e0e, #eca922);
+}
+.container .versus-container .game-start .player .scissors span {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: inset 0 5px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.container .versus-container .game-start .player .scissors span img {
+  width: 35px;
+}
+.container .versus-container .game-start .player .rock {
+  width: 110px;
+  height: 110px;
+  padding: 15px;
+  box-shadow: inset -2px -10px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, #dc2e4e, #dd405d);
+}
+.container .versus-container .game-start .player .rock span {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: inset 0 5px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.container .versus-container .game-start .player .rock span img {
+  width: 35px;
+}
+.container .versus-container .game-start .computer {
+  margin: auto;
+  width: 110px;
+  height: 110px;
+  background-color: #141539;
+  border-radius: 50%;
+}
+.container .versus-container .game-start .computer .paper {
+  width: 110px;
+  height: 110px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: inset -2px -10px 2px 2px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(to bottom, #4865f4, #5671f5);
+}
+.container .versus-container .game-start .computer .paper span {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: inset 0 5px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.container .versus-container .game-start .computer .paper span img {
+  width: 35px;
+}
+.container .versus-container .game-start .computer .scissors {
+  box-shadow: inset -2px -10px 2px 2px rgba(0, 0, 0, 0.25);
+  width: 110px;
+  height: 110px;
+  padding: 15px;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, #ec9e0e, #eca922);
+}
+.container .versus-container .game-start .computer .scissors span {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: inset 0 5px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.container .versus-container .game-start .computer .scissors span img {
+  width: 35px;
+}
+.container .versus-container .game-start .computer .rock {
+  width: 110px;
+  height: 110px;
+  padding: 15px;
+  box-shadow: inset -2px -10px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, #dc2e4e, #dd405d);
+}
+.container .versus-container .game-start .computer .rock span {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: inset 0 5px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.container .versus-container .game-start .computer .rock span img {
+  width: 35px;
+}
+.container .versus-container .weapon {
+  min-height: 400px;
+  background-image: url("/images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  transition: all 0.3s;
+  min-height: 400px;
+}
+.container .versus-container .weapon .paper {
+  margin-top: 50px;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  width: 110px;
+  height: 110px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: inset -2px -10px 2px 2px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(to bottom, #4865f4, #5671f5);
+}
+.container .versus-container .weapon .paper span {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: inset 0 5px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.container .versus-container .weapon .paper span img {
+  width: 35px;
+}
+.container .versus-container .weapon .scissors {
+  margin-top: 50px;
+  box-shadow: inset -2px -10px 2px 2px rgba(0, 0, 0, 0.25);
+  grid-column-start: 4;
+  grid-column-end: 4;
+  width: 110px;
+  height: 110px;
+  padding: 15px;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, #ec9e0e, #eca922);
+}
+.container .versus-container .weapon .scissors span {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: inset 0 5px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.container .versus-container .weapon .scissors span img {
+  width: 35px;
+}
+.container .versus-container .weapon .rock {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  margin-top: 30px;
+  width: 110px;
+  height: 110px;
+  padding: 15px;
+  box-shadow: inset -2px -10px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, #dc2e4e, #dd405d);
+}
+.container .versus-container .weapon .rock span {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: inset 0 5px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.container .versus-container .weapon .rock span img {
+  width: 35px;
+}
+.container .result-container {
+  font-family: "Barlow Semi Condensed";
+  margin: 0px 100px;
+  display: none;
+}
+.container .result-container h1 {
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+  margin: 10px;
+}
+.container .result-container .play-again {
+  background-color: #ffffffff;
+  font-size: 20px;
+  margin: auto;
+  width: 150px;
+  border-radius: 10px;
+  text-align: center;
+}
+.container .result-container .play-again h6 {
+  padding: 10px;
 }
 .container .rules-container {
+  font-family: "Barlow Semi Condensed";
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px;
-}
-.container .rules-container .rules-picture {
-  background-color: #ffffff;
-  padding: 50px 10px 10px 10px;
+  color: #ffffffff;
+  font-size: 20px;
+  border: 3px solid #606e85;
+  margin: 100px auto;
+  width: 150px;
+  padding: 13px 30px;
   border-radius: 10px;
-  text-align: center;
-  display: block;
-  position: absolute;
+  margin-bottom: 50px;
 }
-.container .rules-container .rules-picture .fa-times {
-  display: block;
-  font-size: 50px;
-  margin-top: 50px;
-  color: #ccc;
-}
-.container main {
-  background-image: url("/images/bg-triangle.svg");
-  background-size: 200px;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: none;
+.container .rules {
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  margin-bottom: 250px;
 }
-.container main .paper-container {
-  position: relative;
-  bottom: 75px;
-  left: 20px;
-  background-color: #ffffff;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  padding: 15px;
-  text-align: center;
-  cursor: pointer;
-  background-image: linear-gradient(to bottom, #4865f4, #5671f5);
-}
-.container main .paper-container .paper {
-  background-color: #ffffff;
-  height: 90px;
+.container .rules .show-rules {
+  position: fixed;
+  height: 400px;
+  background: #ffffff;
   padding: 20px;
-  border-radius: 50%;
-}
-.container main .scissor-container {
-  position: relative;
-  bottom: 80px;
-  left: 105px;
-  background-color: #ffffff;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  padding: 15px;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0;
+  padding-top: 50px;
+  margin: 100px 30px auto;
+  transition: opacity 0.1s ease;
   text-align: center;
-  cursor: pointer;
-  background-image: linear-gradient(to bottom, #ec9e0e, #eca922);
-}
-.container main .scissor-container .scissor {
-  background-color: #ffffff;
-  height: 90px;
-  padding: 20px;
-  border-radius: 50%;
-}
-.container main .rock-container {
-  position: relative;
-  top: 70px;
-  right: 130px;
-  background-color: #ffffff;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  padding: 15px;
-  text-align: center;
-  cursor: pointer;
-  background-image: linear-gradient(to bottom, #dc2e4e, #dd405d);
-}
-.container main .rock-container .rock {
-  background-color: #ffffff;
-  height: 90px;
-  padding: 20px;
-  border-radius: 50%;
-}
-.container footer {
-  margin: auto;
-  position: relative;
-}
-.container footer .rules {
-  width: 150px;
-  text-align: center;
-  border: 3px solid #606e85;
-  cursor: pointer;
   border-radius: 10px;
 }
-.container footer .rules h4 {
-  margin: 0;
-  padding: 10px;
-  font-family: "Barlow Semi Condensed";
-  color: #ffffff;
-  font-size: 20px;
+.container .rules .active {
+  opacity: 3;
+  pointer-events: all;
 }
-.container .game-start {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: auto;
-  grid-column-gap: 80px;
-  margin-bottom: 100px;
-  margin-top: 50px;
-}
-.container .game-start .paper-container {
-  position: relative;
-  bottom: 75px;
-  left: 20px;
-  background-color: #ffffff;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  padding: 15px;
-  text-align: center;
-  cursor: pointer;
-  background-image: linear-gradient(to bottom, #4865f4, #5671f5);
-}
-.container .game-start .paper-container .paper {
-  background-color: #ffffff;
-  height: 90px;
-  padding: 20px;
-  border-radius: 50%;
-}
-.container .game-start .scissor-container {
-  background-color: #ffffff;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  padding: 15px;
-  text-align: center;
-  cursor: pointer;
-  background-image: linear-gradient(to bottom, #ec9e0e, #eca922);
-}
-.container .game-start .scissor-container .scissor {
-  background-color: #ffffff;
-  height: 90px;
-  padding: 20px;
-  border-radius: 50%;
-}
-.container .game-start .rock-container {
-  margin: 0;
-  background-color: #ffffff;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  padding: 15px;
-  text-align: center;
-  cursor: pointer;
-  background-image: linear-gradient(to bottom, #dc2e4e, #dd405d);
-}
-.container .game-start .rock-container .rock {
-  background-color: #ffffff;
-  height: 90px;
-  padding: 20px;
-  border-radius: 50%;
-}
-.container .result {
-  margin: auto;
-  text-align: center;
-  display: none;
-}
-.container .result h1 {
-  font-family: "Barlow Semi Condensed";
-  color: #ffffff;
-  font-size: 50px;
-  margin: 0;
-}
-.container .result .play-again {
-  background-color: #ffffff;
-  font-family: "Barlow Semi Condensed";
-  color: #3b4363;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 30px 0px 60px 0px;
-  width: 160px;
-}
-.container .result .play-again h4 {
-  margin: 0px;
+.container .rules .active .fa-times {
+  padding-top: 20px;
+  font-size: 30px;
+  color: #cccFweapon;
+  display: block;
 }
 
-@media all and (min-width: 700px) {
-  .container header {
-    min-width: 600px;
+@media all and (min-width: 640px) {
+  .container .score-container {
+    padding: 15px 30px;
+    max-width: 700px;
+    margin: 30px auto;
   }
-  .container header img {
-    width: 150px;
+  .container .score-container .container {
+    padding: 20px 30px;
   }
-  .container header .score {
-    width: 150px;
-    height: 100px;
-    text-align: center;
-    margin-left: 140px;
-  }
-  .container header .score p {
+  .container .score-container h4 {
     font-size: 20px;
   }
-  .container header .score h2 {
-    font-size: 50px;
+  .container .score-container h1 {
+    font-size: 40px;
   }
-  .container main {
-    background-size: 410px;
-    height: 100%;
+  .container .score-container img {
+    width: 180px;
   }
-  .container main .paper-container {
-    bottom: 150px;
-    width: 220px;
-    height: 220px;
-    padding: 25px;
+  .container .versus-container {
+    margin: auto;
   }
-  .container main .paper-container .paper {
-    height: 170px;
-    width: 170px;
-    text-align: center;
+  .container .versus-container .game-start .player {
+    width: 180px;
+    height: 180px;
   }
-  .container main .paper-container .paper img {
-    padding-top: 20px;
+  .container .versus-container .game-start .player .paper {
+    width: 180px;
+    height: 180px;
+  }
+  .container .versus-container .game-start .player .paper span {
+    width: 150px;
+    height: 150px;
+    padding-top: 40px;
+  }
+  .container .versus-container .game-start .player .paper span img {
     width: 80px;
+    height: 80px;
   }
-  .container main .scissor-container {
-    bottom: 150px;
-    left: 200px;
-    height: 220px;
-    width: 220px;
-    padding: 25px;
+  .container .versus-container .game-start .player .scissors {
+    width: 180px;
+    height: 180px;
   }
-  .container main .scissor-container .scissor {
-    height: 170px;
-    width: 170px;
-    text-align: center;
+  .container .versus-container .game-start .player .scissors span {
+    width: 150px;
+    height: 150px;
+    padding-top: 40px;
   }
-  .container main .scissor-container .scissor img {
-    padding-top: 20px;
+  .container .versus-container .game-start .player .scissors span img {
     width: 80px;
+    height: 80px;
   }
-  .container main .rock-container {
-    right: 220px;
-    top: 100px;
-    height: 220px;
-    width: 220px;
-    padding: 25px;
+  .container .versus-container .game-start .player .rock {
+    width: 180px;
+    height: 180px;
   }
-  .container main .rock-container .rock {
-    height: 170px;
-    width: 170px;
-    text-align: center;
+  .container .versus-container .game-start .player .rock span {
+    width: 150px;
+    height: 150px;
+    padding-top: 40px;
   }
-  .container main .rock-container .rock img {
-    padding-top: 20px;
+  .container .versus-container .game-start .player .rock span img {
     width: 80px;
+    height: 80px;
   }
-  .container footer {
-    display: flex;
-    justify-content: flex-end;
+  .container .versus-container .game-start .computer {
+    width: 180px;
+    height: 180px;
+  }
+  .container .versus-container .game-start .computer .paper {
+    width: 180px;
+    height: 180px;
+  }
+  .container .versus-container .game-start .computer .paper span {
+    width: 150px;
+    height: 150px;
+    padding-top: 40px;
+  }
+  .container .versus-container .game-start .computer .paper span img {
+    width: 80px;
+    height: 80px;
+  }
+  .container .versus-container .game-start .computer .scissors {
+    width: 180px;
+    height: 180px;
+  }
+  .container .versus-container .game-start .computer .scissors span {
+    width: 150px;
+    height: 150px;
+    padding-top: 40px;
+  }
+  .container .versus-container .game-start .computer .scissors span img {
+    width: 80px;
+    height: 80px;
+  }
+  .container .versus-container .game-start .computer .rock {
+    width: 180px;
+    height: 180px;
+  }
+  .container .versus-container .game-start .computer .rock span {
+    width: 150px;
+    height: 150px;
+    padding-top: 40px;
+  }
+  .container .versus-container .game-start .computer .rock span img {
+    width: 80px;
+    height: 80px;
+  }
+  .container .versus-container .weapon {
+    margin-top: 20px;
+    background-size: 400px;
+    margin-bottom: 400px;
+  }
+  .container .versus-container .weapon .paper {
+    margin-top: 0;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    width: 180px;
+    height: 180px;
+  }
+  .container .versus-container .weapon .paper span {
+    width: 150px;
+    height: 150px;
+    padding-top: 40px;
+  }
+  .container .versus-container .weapon .paper span img {
+    width: 80px;
+    height: 80px;
+  }
+  .container .versus-container .weapon .scissors {
+    margin-top: 0;
+    margin-bottom: 50px;
+    width: 180px;
+    height: 180px;
+  }
+  .container .versus-container .weapon .scissors span {
+    width: 150px;
+    height: 150px;
+    padding-top: 40px;
+  }
+  .container .versus-container .weapon .scissors span img {
+    width: 80px;
+    height: 80px;
+  }
+  .container .versus-container .weapon .rock {
+    margin-top: 50px;
+    width: 180px;
+    height: 180px;
+  }
+  .container .versus-container .weapon .rock span {
+    width: 150px;
+    height: 150px;
+    padding-top: 40px;
+  }
+  .container .versus-container .weapon .rock span img {
+    width: 80px;
+    height: 80px;
+  }
+  .container .result-container h1 {
+    font-size: 80px;
+  }
+  .container .result-container .play-again {
+    margin-top: 0px;
+    font-size: 35px;
+    width: 250px;
+  }
+  .container .rules-container {
+    float: right;
+    margin-top: 40px;
     margin-right: 50px;
-    position: relative;
-    bottom: 80px;
+  }
+}
+@media all and (min-width: 1100px) {
+  .container .versus-container .game-start {
+    margin: 0px 200px;
+  }
+  .container .versus-container .weapon .paper {
+    margin-left: 100px;
+  }
+  .container .versus-container .weapon .scissors {
+    margin-right: 100px;
+  }
+  .container .versus-container .weapon .rock {
+    margin-left: 30px;
   }
 }
