@@ -1,14 +1,15 @@
-const buttons = document.querySelectorAll('#button');
-const rulesBtn = document.querySelector('.rules-container');
-const rules = document.querySelector('.show-rules')
-const player = document.querySelector('.player');
-const computer = document.querySelector('.computer');
-const gameContainer = document.querySelector('.game-start');
-const weaponContainer = document.querySelector('.weapon');
-const result = document.getElementById('result')
-const resultContainer = document.querySelector('.result-container');
-const playAgainBtn = document.querySelector('.play-again');
-let score = document.getElementById('score');
+const buttons           = document.querySelectorAll('#button');
+const rulesBtn          = document.querySelector('.rules-container');
+const rules             = document.querySelector('.show-rules')
+const player            = document.querySelector('.player');
+const computer          = document.querySelector('.computer');
+const gameContainer     = document.querySelector('.game-start');
+const weaponContainer   = document.querySelector('.weapon');
+const result            = document.getElementById('result')
+const resultContainer   = document.querySelector('.result-container');
+const playAgainBtn      = document.querySelector('.play-again');
+
+let score               = document.getElementById('score');
 
 scoreValue = 0
 
@@ -24,14 +25,12 @@ buttons.forEach(button => button.addEventListener('click', () => {
     hideWeapon();
     createWeaponEl(PlayerWeapon, player);
     
-
     setTimeout(() => {
         createWeaponEl(ComputerWeapon, computer)
         checkWinner(PlayerWeapon, ComputerWeapon);
         score.textContent = `${scoreValue}`
       }, 1000);
     
-
 }));
 
 const getComputerInput = () => {
