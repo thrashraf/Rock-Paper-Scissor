@@ -58,7 +58,7 @@ const createWeaponEl = (weapon, user) => {
     WeaponEl.id = 'versus'
     WeaponEl.innerHTML = `
         <span>
-            <img src="/images/icon-${weapon}.svg" alt="">
+            <img src="images/icon-${weapon}.svg" alt="">
         </span>
         <h4>${user.className.toUpperCase()} PICKED</h4>
     `;
