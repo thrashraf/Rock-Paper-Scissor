@@ -8,7 +8,6 @@ const weaponContainer   = document.querySelector('.weapon');
 const result            = document.getElementById('result')
 const resultContainer   = document.querySelector('.result-container');
 const playAgainBtn      = document.querySelector('.play-again');
-
 let score               = document.getElementById('score');
 
 scoreValue = 0
@@ -59,7 +58,7 @@ const createWeaponEl = (weapon, user) => {
     WeaponEl.id = 'versus'
     WeaponEl.innerHTML = `
         <span>
-            <img src="images/icon-${weapon}.svg" alt="">
+            <img src="/images/icon-${weapon}.svg" alt="">
         </span>
         <h4>${user.className.toUpperCase()} PICKED</h4>
     `;
