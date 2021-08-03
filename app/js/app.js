@@ -23,9 +23,9 @@ buttons.forEach(button => button.addEventListener('click', () => {
     
     hideWeapon();
     createWeaponEl(PlayerWeapon, player);
-    
+    createWeaponEl(ComputerWeapon, computer)
     setTimeout(() => {
-        createWeaponEl(ComputerWeapon, computer)
+        
         checkWinner(PlayerWeapon, ComputerWeapon);
         score.textContent = `${scoreValue}`
       }, 1000);
@@ -87,10 +87,10 @@ const checkWinner = (player, computer) => {
         player === 'rock' && computer === 'scissors'||
         player === 'scissors' && computer === 'paper'
     ) {
+
         scoreValue++;
         resultContainer.style.display = 'block'
         result.innerHTML = `PLAYER WIN`
-        
 
     } else {
         scoreValue--;
