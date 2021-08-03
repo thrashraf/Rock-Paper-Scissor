@@ -8,6 +8,9 @@ const weaponContainer = document.querySelector('.weapon');
 const result = document.getElementById('result')
 const resultContainer = document.querySelector('.result-container');
 const playAgainBtn = document.querySelector('.play-again');
+let score = document.getElementById('score');
+
+scoreValue = 0
 
 
 buttons.forEach(button => button.addEventListener('click', () => {
@@ -20,8 +23,14 @@ buttons.forEach(button => button.addEventListener('click', () => {
     
     hideWeapon();
     createWeaponEl(PlayerWeapon, player);
-    createWeaponEl(ComputerWeapon, computer);
-    checkWinner(PlayerWeapon, ComputerWeapon);
+    
+
+    setTimeout(() => {
+        createWeaponEl(ComputerWeapon, computer)
+        checkWinner(PlayerWeapon, ComputerWeapon);
+        score.textContent = `${scoreValue}`
+      }, 1000);
+    
 
 }));
 
@@ -45,22 +54,20 @@ const getComputerInput = () => {
 
 const createWeaponEl = (weapon, user) => {
 
+    console.log(user.className);
     const WeaponEl = document.createElement('div')
     WeaponEl.className = weapon
-    WeaponEl.id = 'button'
+    WeaponEl.id = 'versus'
     WeaponEl.innerHTML = `
         <span>
             <img src="/images/icon-${weapon}.svg" alt="">
         </span>
+        <h4>${user.className.toUpperCase()} PICKED</h4>
     `;
 
     
-    user.removeChild()
+    console.log(WeaponEl);
     user.append(WeaponEl)
-
-    
-    
-
     
 }
 
@@ -77,24 +84,36 @@ const checkWinner = (player, computer) => {
     if (player === computer) {
         resultContainer.style.display = 'block'
         result.innerHTML = `DRAW`
+        
     } else if (player === 'paper' && computer === 'rock'||
         player === 'rock' && computer === 'scissors'||
         player === 'scissors' && computer === 'paper'
     ) {
+        scoreValue++;
         resultContainer.style.display = 'block'
-        result.innerHTML = `Player WIN`
+        result.innerHTML = `PLAYER WIN`
+        
+
     } else {
+        scoreValue--;
         resultContainer.style.display = 'block'
-        result.innerHTML = `Computer WIN`
+        result.innerHTML = `COMPUTER WIN`
+        
     }
+
+    rulesBtn.style.display = 'none'
 }
 
 const playAgain = () => {
 
-    
+    const computerChild = computer.querySelector('#versus')
+    const playerChild = player.querySelector('#versus')
+    computer.removeChild(computerChild)
+    player.removeChild(playerChild);
     weaponContainer.style.display = 'grid';
     gameContainer.style.display = 'none'
     resultContainer.style.display = 'none'
+    rulesBtn.style.display = 'block'
 }
 
 
