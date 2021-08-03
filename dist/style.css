@@ -331,6 +331,7 @@ body {
   width: 150px;
   padding: 13px 30px;
   border-radius: 10px;
+  text-align: center;
   margin-bottom: 50px;
 }
 .container .rules {
@@ -359,7 +360,7 @@ body {
 .container .rules .active .fa-times {
   padding-top: 20px;
   font-size: 30px;
-  color: #cccFweapon;
+  color: #ccc;
   display: block;
 }
 
